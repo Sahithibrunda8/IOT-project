@@ -1,0 +1,28 @@
+#include <LiquidCrystal.h>
+
+const int rs = 8, en = 9, d4 = 10, d5 = 11, d6 = 12, d7 = 13; LiquidCrystal lcd(rs, en, d4, d5, d6, d7);
+int ir1 = A0; int ir2 = A1; int ir3 = A4; int rly1 = 2;
+
+void setup() { Serial.begin(9600); pinMode(ir1, INPUT); pinMode(ir2, INPUT); pinMode(ir3, INPUT); pinMode(rly1, OUTPUT); digitalWrite(rly1, 0);
+lcd.begin(16, 2);
+lcd.setCursor(0, 0); lcd.print("COIN BASED "); lcd.setCursor(0, 1); lcd.print("MOBILE CHARGING");
+delay(2000); lcd.clear();
+}
+
+void loop() {
+int ob1 = digitalRead(ir1); int ob2 = digitalRead(ir2); int ob3 = digitalRead(ir3);
+
+lcd.clear(); lcd.setCursor(0, 0); lcd.print("1:"); lcd.setCursor(2, 0); lcd.print(ob1); lcd.setCursor(8, 0); lcd.print("2:"); lcd.setCursor(10, 0); lcd.print(ob2); lcd.setCursor(2, 1); lcd.print("3:"); lcd.setCursor(4, 1); lcd.print(ob3);
+
+delay(500);
+
+if (ob1 == 0) { digitalWrite(rly1, 1);
+delay(600000); // Change duration to 10 minutes (600,000 milliseconds) digitalWrite(rly1, 0);
+}
+if (ob2 == 0) { digitalWrite(rly1, 1);
+delay(600000); // Change duration to 10 minutes (600,000 milliseconds) digitalWrite(rly1, 0);
+}
+if (ob3 == 0) { digitalWrite(rly1, 1);
+delay(600000); // Change duration to 10 minutes (600,000 milliseconds) digitalWrite(rly1, 0);
+}
+}
