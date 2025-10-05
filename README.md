@@ -1,12 +1,10 @@
 # Coin-Based Mobile Charger
 
-## 💡 Overview
+##  Overview
 This project presents a *coin-operated mobile charging system* that enables users to charge their phones by inserting coins.  
 It provides an affordable and accessible solution for mobile charging in *public places such as bus stops, train stations, and rural areas* where traditional charging options may not be available.
 
 The system combines *embedded systems and IoT* to make charging both intelligent and convenient.
-
----
 
 ##  How It Works
 - When a *coin is inserted, it is validated by the **coin acceptor sensor*.
@@ -16,8 +14,6 @@ The system combines *embedded systems and IoT* to make charging both intelligent
 - The system uses an *ESP8266 Wi-Fi module* to send data (coin entries and usage stats) to the cloud (ThingSpeak platform).
 - After the timer expires, the relay cuts off power to stop charging.
 
----
-
 ##  Features
 - Coin-based activation for mobile charging  
 - LCD display showing charging time and status  
@@ -25,8 +21,6 @@ The system combines *embedded systems and IoT* to make charging both intelligent
 - Secure and reliable Arduino-based control  
 - User-friendly interface for public use  
 - Works offline with optional online tracking  
-
----
 
 ##  Components Used
 ### Hardware
@@ -43,9 +37,6 @@ The system combines *embedded systems and IoT* to make charging both intelligent
 - Arduino IDE  
 - Embedded C / C++  
 - ThingSpeak Cloud (for IoT data visualization)
-
----
-
 ##  Project Flow
 1. User inserts a coin  
 2. Arduino verifies if the coin is valid  
@@ -67,7 +58,6 @@ The system combines *embedded systems and IoT* to make charging both intelligent
 8. Update data to ThingSpeak  
 9. End  
 
----
 
 ##  Results
 - Achieved average charging efficiency of *1.5% per minute* across devices.  
@@ -79,21 +69,16 @@ The system combines *embedded systems and IoT* to make charging both intelligent
 		
 
 
----
-
 ##  Significance
 This project bridges *embedded systems and IoT* to deliver a real-world, socially impactful innovation.  
 It demonstrates how technology can solve everyday problems and provides a scalable idea for *smart cities and rural electrification*.
 
----
 
----
 
 ##  Conclusion
 The Coin-Based Mobile Charger provides a *low-cost, reliable, and accessible charging solution* for public spaces.  
 By integrating *Arduino control, IR sensing, and IoT connectivity, this project demonstrates innovation in both design and utility - merging **engineering with social impact*.
 
----
 
 ##  License
 This project is open for educational and research purposes.
